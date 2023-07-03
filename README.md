@@ -1,2 +1,5 @@
 # Intership-Task2
-Calculator
+_Calculator_
+- Javascript
+* CSS3
++ HTML5
