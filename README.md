@@ -1,4 +1,4 @@
-#Internship-Task-2
+# Internship-Task-2
 __Calculator__
 - Javascript
 * CSS3
