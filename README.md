@@ -1,5 +1,6 @@
-# Intership-Task2
-_Calculator_
+#Internship-Task-2
+__Calculator__
 - Javascript
 * CSS3
-+ HTML5
++ Tailwind
+- HTML5
