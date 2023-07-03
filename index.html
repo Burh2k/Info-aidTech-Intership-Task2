@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Caculator</title>
+    <!-- CSS StyleSheet -->
+    <link rel="stylesheet" href="mystyles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icons8-calculator-100.png">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Header for Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-800">
+    <nav class="text-white text-5xl lg:bg-slate-500 
+    cursor-pointer font-sans font-bold ps-20 py-5 tracking-wider">
+        <ul>
+            <li>
+                <h1>
+                    CALCULATOR
+                </h1>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="mx-auto my-48 w-1/4 rounded-2xl text-center font-bold text-white bg-white">
+        <input
+            class="input p-7 ps-5 block focus:placeholder:clear-none rounded-t-2xl w-full text-black placeholder:text-slate-500 bg-slate-400 text-3xl"
+            type="number" placeholder="Enter Number">
+        <div class="grid grid-flow-row grid-cols-4 gap-1 p-3">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer after:bg-white text-white"
+                id="clear">
+                C
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="delete">
+                <i class="fas fa-backspace"></i>
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="percentage">
+                %
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="divide">
+                /
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick=show id="1">
+                1
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="2">
+                2
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="3">
+                3
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="multiply">
+                x
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="4">
+                4
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="5">
+                5
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="6">
+                6
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="+">
+                +
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="7">
+                7
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="8">
+                8
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="9">
+                9
+            </div>
+            <div class="bg-black text-xl rounded-2xl grid-col-1 py-5 hover:cursor-pointer" id="-">
+                -
+            </div>
+            <div class="col-start-1 text-xl col-span-2 bg-black rounded-2xl grid-rows-1 py-5 hover:cursor-pointer"
+                id="0">
+                0
+            </div>
+            <div class="bg-black rounded-2xl text-xl grid-rows-1 py-5 hover:cursor-pointer" id=".">
+                .
+            </div>
+            <div class="bg-black text-2xl rounded-2xl grid-col-1 py-5 hover:cursor-pointer" id="=">
+                =
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
