@@ -7,6 +7,8 @@
     <title>My Caculator</title>
     <!-- CSS StyleSheet -->
     <link rel="stylesheet" href="mystyles.css">
+    <!-- JavaScript File -->
+    <script src="ScriptFile.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="icons8-calculator-100.png">
     <!-- Font-Awesome -->
@@ -16,19 +18,8 @@
 
 </head>
 
-<body class="bg-gray-800">
-    <nav class="text-white text-5xl lg:bg-slate-500 
-    cursor-pointer font-sans font-bold ps-20 py-5 tracking-wider">
-        <ul>
-            <li>
-                <h1>
-                    CALCULATOR
-                </h1>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="mx-auto my-48 w-1/4 rounded-2xl text-center font-bold text-white bg-white">
+<body class="bg-gray-900">
+    <div class="mx-auto my-52 w-1/4 rounded-2xl text-center font-bold text-white bg-white">
         <input
             class="input p-7 ps-5 block focus:placeholder:clear-none rounded-t-2xl w-full text-black placeholder:text-slate-500 bg-slate-400 text-3xl"
             type="number" placeholder="Enter Number">
@@ -46,44 +37,53 @@
             <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="divide">
                 /
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick=show id="1">
+            <div class="num bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
+                data-value="1">
                 1
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="2">
+            <div class="num bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
+                data-value="2">
                 2
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="3">
+            <div class="num bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" data-value="3"
+                onclick="show(this)">
                 3
             </div>
             <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="multiply">
                 x
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="4">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="4" onclick="show(this)"
+                data-value="4">
                 4
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="5">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="5" onclick="show(this)"
+                data-value="5">
                 5
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="6">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="6" onclick="show(this)"
+                data-value="6">
                 6
             </div>
             <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="+">
                 +
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="7">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="7" onclick="show(this)"
+                data-value="7">
                 7
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="8">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="8" onclick="show(this)"
+                data-value="8">
                 8
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="9">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="9" onclick="show(this)"
+                data-value="9">
                 9
             </div>
             <div class="bg-black text-xl rounded-2xl grid-col-1 py-5 hover:cursor-pointer" id="-">
                 -
             </div>
             <div class="col-start-1 text-xl col-span-2 bg-black rounded-2xl grid-rows-1 py-5 hover:cursor-pointer"
-                id="0">
+                onclick="show(this)" data-value="0">
                 0
             </div>
             <div class="bg-black rounded-2xl text-xl grid-rows-1 py-5 hover:cursor-pointer" id=".">
@@ -93,7 +93,6 @@
                 =
             </div>
         </div>
-    </div>
     </div>
 
 </body>
