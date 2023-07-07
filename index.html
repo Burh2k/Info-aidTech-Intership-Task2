@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm" />
     <title>My Caculator</title>
     <!-- CSS StyleSheet -->
     <link rel="stylesheet" href="mystyles.css">
@@ -22,19 +23,22 @@
     <div class="mx-auto my-52 w-1/4 rounded-2xl text-center font-bold text-white bg-white">
         <input
             class="input p-7 ps-5 block focus:placeholder:clear-none rounded-t-2xl w-full text-black placeholder:text-slate-500 bg-slate-400 text-3xl"
-            type="number" placeholder="Enter Number">
+            type="text" placeholder="Enter Number">
         <div class="grid grid-flow-row grid-cols-4 gap-1 p-3">
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer after:bg-white text-white"
-                id="clear">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer text-white"
+                data-value="" onclick="show(this)">
                 C
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="delete">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer"
+             onclick="backspace()">
                 <i class="fas fa-backspace"></i>
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="percentage">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" data-value="%"
+                onclick="show(this)">
                 %
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="divide">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
+                data-value="/">
                 /
             </div>
             <div class="num bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
@@ -49,47 +53,51 @@
                 onclick="show(this)">
                 3
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="multiply">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" data-value="*"
+                onclick="show(this)">
                 x
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="4" onclick="show(this)"
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
                 data-value="4">
                 4
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="5" onclick="show(this)"
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
                 data-value="5">
                 5
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="6" onclick="show(this)"
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
                 data-value="6">
                 6
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="+">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" data-value="+"
+                onclick="show(this)">
                 +
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="7" onclick="show(this)"
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
                 data-value="7">
                 7
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="8" onclick="show(this)"
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
                 data-value="8">
                 8
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" id="9" onclick="show(this)"
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="show(this)"
                 data-value="9">
                 9
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-col-1 py-5 hover:cursor-pointer" id="-">
+            <div class="bg-black text-xl rounded-2xl grid-col-1 py-5 hover:cursor-pointer" data-value="-"
+                onclick="show(this)">
                 -
             </div>
             <div class="col-start-1 text-xl col-span-2 bg-black rounded-2xl grid-rows-1 py-5 hover:cursor-pointer"
                 onclick="show(this)" data-value="0">
                 0
             </div>
-            <div class="bg-black rounded-2xl text-xl grid-rows-1 py-5 hover:cursor-pointer" id=".">
+            <div class="bg-black rounded-2xl text-xl grid-rows-1 py-5 hover:cursor-pointer" data-value="."
+                onclick="show(this)">
                 .
             </div>
-            <div class="bg-black text-2xl rounded-2xl grid-col-1 py-5 hover:cursor-pointer" id="=">
+            <div class="bg-black text-2xl rounded-2xl grid-col-1 py-5 hover:cursor-pointer" onclick="result()">
                 =
             </div>
         </div>
