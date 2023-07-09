@@ -5,4 +5,4 @@ __Calculator__
 + Tailwind
 - HTML5
 ## Points to Ponder
-1. If you only add one screen size in the JS file, it will override all the screens available
+1. For custom screen size in tailwind, only add one screen size in the JS file, it will override all the screens available
