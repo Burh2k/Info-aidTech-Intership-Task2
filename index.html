@@ -8,8 +8,6 @@
     <title>My Caculator</title>
     <!-- CSS StyleSheet -->
     <link rel="stylesheet" href="mystyles.css">
-    <!-- JavaScript File -->
-    <script src="ScriptFile.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="icons8-calculator-100.png">
     <!-- Font-Awesome -->
@@ -19,18 +17,39 @@
 
 </head>
 
-<body class="bg-gray-900">
-    <div class="mx-auto my-52 w-1/4 rounded-2xl text-center font-bold text-white bg-white">
+<body id="body" class="bg-gray-300">
+    <nav class="bg-slate-950" id="navbar">
+        <ul>
+            <li class="flex items-center justify-between">
+                <h1 id="heading" class="font-bold lg:text-6xl sm:text-4xl lg:p-9 lg:ps-16 sm:p-5 lg:pt-7 sm:pt-3 text-white">
+                    CALCULATOR
+                </h1>
+                <label class="relative inline-flex items-center me-20 cursor-pointer">
+                    <input type="checkbox" class="sr-only peer" onclick="change()">
+                    <div
+                        class="w-12 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-600 rounded-full peer
+                        dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px]
+                        after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-blue-700">
+                    </div>
+                    <span class="ml-3 text-lg font-medium text-gray-900 dark:text-gray-300" id="theme">
+                        DARK
+                    </span>
+                </label>
+            </li>
+        </ul>
+    </nav>
+
+    <div
+        class="mx-auto lg:my-36 sm:my-20 lg:w-1/4 sm:w-4/5 rounded-2xl text-center font-bold border-black border-2 text-white bg-white" id="cal">
         <input
-            class="input p-7 ps-5 block focus:placeholder:clear-none rounded-t-2xl w-full text-black placeholder:text-slate-500 bg-slate-400 text-3xl"
+            class="input lg:p-7 sm:p-5 ps-5 lg:text-3xl sm:text-2xl rounded-t-2xl w-full text-black placeholder:text-slate-500 bg-slate-400"
             type="text" placeholder="Enter Number">
-        <div class="grid grid-flow-row grid-cols-4 gap-1 p-3">
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer text-white"
-                data-value="" onclick="show(this)">
+        <div class="grid grid-flow-row grid-cols-4 gap-1 lg:p-3 sm:p-4">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer text-white" data-value=""
+                onclick="show(this)">
                 C
             </div>
-            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer"
-             onclick="backspace()">
+            <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" onclick="backspace()">
                 <i class="fas fa-backspace"></i>
             </div>
             <div class="bg-black text-xl rounded-2xl grid-rows-1 py-5 hover:cursor-pointer" data-value="%"
@@ -102,7 +121,8 @@
             </div>
         </div>
     </div>
-
+    <!-- JavaScript File -->
+    <script src="ScriptFile.js"></script>
 </body>
 
 </html>
